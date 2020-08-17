@@ -140,7 +140,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/organization" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -169,7 +169,7 @@
       <updated>1597424121860</updated>
       <workItem from="1597424123065" duration="5314000" />
       <workItem from="1597472000581" duration="22895000" />
-      <workItem from="1597585427882" duration="11147000" />
+      <workItem from="1597585427882" duration="11878000" />
     </task>
     <servers />
   </component>
@@ -205,17 +205,17 @@
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
     <state x="778" y="456" width="360" height="144" key="NewPhpFileDialog/0.0.1920.1057@0.0.1920.1057" timestamp="1597598426122" />
-    <state x="464" y="164" key="SettingsEditor" timestamp="1597424172942">
+    <state x="464" y="164" key="SettingsEditor" timestamp="1597601000835">
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
-    <state x="464" y="164" key="SettingsEditor/0.0.1920.1057@0.0.1920.1057" timestamp="1597424172942" />
+    <state x="464" y="164" key="SettingsEditor/0.0.1920.1057@0.0.1920.1057" timestamp="1597601000835" />
     <state x="570" y="143" width="776" height="770" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597590244062">
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
     <state x="570" y="143" width="776" height="770" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1057@0.0.1920.1057" timestamp="1597590244062" />
-    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1597599969629">
+    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1597600530240">
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
-    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1057@0.0.1920.1057" timestamp="1597599969629" />
+    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1057@0.0.1920.1057" timestamp="1597600530240" />
   </component>
 </project>
