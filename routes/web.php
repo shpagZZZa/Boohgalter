@@ -51,3 +51,5 @@ Route::get('/report', 'ReportController@index')->name('report')->middleware('aut
 Route::get('/admin', 'AdminController@index')->name('admins')->middleware('auth');
 Route::post('/admin', 'AdminController@storeCode')->name('admin.store')->middleware('auth');
 
+Route::get('/clients', 'ClientController@index')->name('client.index')->middleware('auth');
+

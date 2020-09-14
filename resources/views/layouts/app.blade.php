@@ -43,6 +43,8 @@
                         <a href="{{ route('dishes') }}" class="nav-link">Блюда</a>
 
                         <a href="{{ route('report') }}" class="nav-link">Отчёт</a>
+
+                        <a href="{{ route('client.index') }}" class="nav-link">Клиенты</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
