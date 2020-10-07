@@ -32,6 +32,11 @@
                         <input type="text" id="name" name="name">
                     </div>
 
+                    <div class="form-row">
+                        <label for="amount">Кол-во:</label>
+                        <input type="number" id="amount" name="amount">
+                    </div>
+
                     <button class="btn btn-primary">Добавить ингридиент</button>
                 </form>
             </div>
