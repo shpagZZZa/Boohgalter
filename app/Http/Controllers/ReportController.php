@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\OrderHelper;
+use App\Models\Ingredient;
 use App\Models\Order;
 use App\Models\Organization;
 use Carbon\Carbon;
@@ -27,8 +28,9 @@ class ReportController extends Controller
         }
         $income = $this->getIncomeForPeriod($orders);
         $ingredients = $this->getIngredientsForPeriod($orders);
+        $allIngredients = Ingredient::all();
 
-        return view('report.index', compact('income', 'ingredients', 'orgStr'));
+        return view('report.index', compact('income', 'ingredients', 'orgStr', 'allIngredients'));
     }
 
     private function getIncomeForPeriod($orders)

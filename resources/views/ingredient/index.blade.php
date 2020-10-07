@@ -4,19 +4,24 @@
 @section('content')
     <div class="container">
         <div class="card-body">
-            <div>
+            <table class="table table-primary">
+                <th>Название</th>
+                <th>Остаток</th>
+                <th>Действия</th>
                 @foreach($ingredients as $ingredient)
-                    <div class="justify-content-between mb-2">
-                        <div>
-                            {{ $ingredient->name }}
-                        </div>
-
-                        <div>
-                            <a href="{{ route('ingredient.edit', $ingredient) }}">Изменить название</a>
-                        </div>
-                    </div>
+                    <tr>
+                            <td>
+                                {{ $ingredient->name }}
+                            </td>
+                            <td>
+                                {{$ingredient->amount}} г
+                            </td>
+                            <td>
+                                <a href="{{ route('ingredient.edit', $ingredient) }}">Редактировать</a>
+                            </td>
+                    </tr>
                 @endforeach
-            </div>
+            </table>
 
             <div>
                 <form autocomplete="off" class="form mt-5" action="{{ route('ingredient.store') }}" method="post">

@@ -19,11 +19,21 @@
 
             <div>
                 <h1>Ингридиенты: </h1>
+                @if(!$ingredients)
+                    Не потрачено
+                @endif
                 @foreach($ingredients as $name => $amount)
                     <div>
-                        {{ $name }} - {{ $amount }} г
+                        {{ $name }} - {{ $amount }}
                     </div>
                 @endforeach
+                <h4>Остаток: </h4>
+                @foreach($allIngredients as $ingredient)
+                    <div>
+                        {{$ingredient->name}} - {{$ingredient->amount}} г
+                    </div>
+                @endforeach
+
             </div>
         </div>
     </div>

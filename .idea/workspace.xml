@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72e97889-9836-4c77-b39d-57c6bd0f7de9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IngredientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IngredientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Ingredient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ingredient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ingredient/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ingredient/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ingredient/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ingredient/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/report/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/report/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +194,8 @@
       <workItem from="1597585427882" duration="11878000" />
       <workItem from="1597665043966" duration="140000" />
       <workItem from="1597907325151" duration="392000" />
-      <workItem from="1600096551484" duration="1266000" />
+      <workItem from="1600096551484" duration="1467000" />
+      <workItem from="1602062694493" duration="1287000" />
     </task>
     <servers />
   </component>

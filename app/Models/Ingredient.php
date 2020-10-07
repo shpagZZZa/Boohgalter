@@ -12,5 +12,5 @@ class Ingredient extends Model
             ->withPivot('amount');
     }
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'amount'];
 }

@@ -36,7 +36,8 @@ class IngredientController extends Controller
     private function ingValidate(array $data)
     {
         return Validator::make($data, [
-            'name' => ['string', 'required']
+            'name' => ['string', 'required'],
+            'amount' => ['numeric', 'min:0']
         ])->validate();
     }
 }
