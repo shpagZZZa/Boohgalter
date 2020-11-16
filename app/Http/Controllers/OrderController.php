@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Dto\OrderDto;
+use App\Helpers\IngredientHelper;
 use App\Helpers\RequestHelper;
 use App\Models\Dish;
+use App\Models\Ingredient;
 use App\Models\Order;
 use App\Models\Organization;
 use Illuminate\Http\Request;
@@ -44,10 +46,40 @@ class OrderController extends Controller
 
         $dishes = RequestHelper::fillArrayFromRequest("dish", $request);
         $amountArray = RequestHelper::fillArrayFromRequest('amount', $request);
-        for ($i = 0; $i < count($dishes); $i++)
+
+        $ingTotalAmounts = IngredientHelper::getIngAmountsForOrganization($organization);
+        $ingredientSpent = [];
+        foreach (Ingredient::all() as $ingredient)
         {
-            $dish = Dish::find($dishes[$i]);
-            $order->dishes()->attach($dish, ['amount' => $amountArray[$i]]);
+            $ingredientSpent[$ingredient->id] = 0;
+        }
+
+        foreach ($dishes as $index => $dishId)
+        {
+            $dish = Dish::find($dishId);
+            foreach ($dish->ingredients as $ingredient)
+            {
+                $ingredientSpent[$ingredient->id] += $ingredient->pivot->amount * $amountArray[$index];
+            }
+        }
+
+        foreach ($ingTotalAmounts as $ingId => $amount)
+        {
+            if ($amount < $ingredientSpent[$ingId])
+            {
+                $order->delete();
+                return redirect(route('error', 1000));
+            }
+            Ingredient::find($ingId)->organizations()->attach(
+                $organization,
+                ['amount' => $amount - $ingredientSpent[$ingId]]
+            );
+        }
+
+        foreach ($dishes as $index => $dishId)
+        {
+            $dish = Dish::find($dishId);
+            $order->dishes()->attach($dish, ['amount' => $amountArray[$index]]);
         }
 
         return redirect(route('orders'));

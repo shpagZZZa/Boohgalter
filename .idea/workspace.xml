@@ -3,9 +3,40 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="72e97889-9836-4c77-b39d-57c6bd0f7de9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/RequestHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/RequestHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DishController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IngredientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IngredientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Ingredient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ingredient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Organization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Organization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_07_142704_add_amout_to_ingredients.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ingredient/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ingredient/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/ingredient/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ingredient/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/report/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/report/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,12 +218,24 @@
       <workItem from="1597665043966" duration="140000" />
       <workItem from="1597907325151" duration="392000" />
       <workItem from="1600096551484" duration="1467000" />
-      <workItem from="1602062694493" duration="1691000" />
+      <workItem from="1602062694493" duration="2290000" />
+      <workItem from="1605524298662" duration="10997000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="589" y="211" width="738" height="634" key="#Inspections" timestamp="1597475004744">
@@ -263,14 +306,14 @@
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
     <state width="1878" height="349" key="GridCell.Tab.2.right/0.0.1920.1057@0.0.1920.1057" timestamp="1597907717747" />
-    <state x="702" y="258" width="519" height="539" key="NewPhpClassDialog" timestamp="1600097520118">
+    <state x="702" y="258" width="519" height="539" key="NewPhpClassDialog" timestamp="1605533143785">
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
-    <state x="702" y="258" width="519" height="539" key="NewPhpClassDialog/0.0.1920.1057@0.0.1920.1057" timestamp="1600097520118" />
-    <state x="778" y="456" width="360" height="144" key="NewPhpFileDialog" timestamp="1600097378922">
+    <state x="702" y="258" width="519" height="539" key="NewPhpClassDialog/0.0.1920.1057@0.0.1920.1057" timestamp="1605533143785" />
+    <state x="778" y="456" width="360" height="144" key="NewPhpFileDialog" timestamp="1605536346257">
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
-    <state x="778" y="456" width="360" height="144" key="NewPhpFileDialog/0.0.1920.1057@0.0.1920.1057" timestamp="1600097378922" />
+    <state x="778" y="456" width="360" height="144" key="NewPhpFileDialog/0.0.1920.1057@0.0.1920.1057" timestamp="1605536346257" />
     <state x="464" y="164" key="SettingsEditor" timestamp="1597601000835">
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
@@ -279,9 +322,9 @@
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
     <state x="570" y="143" width="776" height="770" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1057@0.0.1920.1057" timestamp="1597590244062" />
-    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1602063999426">
+    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1605536574406">
       <screen x="0" y="0" width="1920" height="1057" />
     </state>
-    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1057@0.0.1920.1057" timestamp="1602063999426" />
+    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1057@0.0.1920.1057" timestamp="1605536574406" />
   </component>
 </project>

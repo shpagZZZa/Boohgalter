@@ -14,7 +14,8 @@ class RequestHelper
         $result = array();
         while ($request->input($element.$num))
         {
-            array_push($result, $request->input($element.$num));
+//            array_push($result, $request->input($element.$num));
+            $result[$num] = $request->input($element.$num);
             $num++;
         }
         return $result;

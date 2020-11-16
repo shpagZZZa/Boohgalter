@@ -12,5 +12,11 @@ class Ingredient extends Model
             ->withPivot('amount');
     }
 
-    protected $fillable = ['name', 'amount'];
+    public function organizations()
+    {
+        return $this->belongsToMany(Organization::class)
+            ->withPivot('amount');
+    }
+
+    protected $fillable = ['name'];
 }

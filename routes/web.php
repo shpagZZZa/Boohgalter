@@ -21,6 +21,8 @@ Route::get('/', function (){
 
 Auth::routes();
 
+Route::get('/error/{errorId}', 'Controller@error')->name('error')->middleware('auth');
+
 Route::get('/orders', 'OrderController@index')->name('orders')->middleware('auth');
 Route::get('/orders/new', 'OrderController@create')->name('order.create')->middleware('auth');
 Route::post('/orders', 'OrderController@store')->name('order.store')->middleware('auth');

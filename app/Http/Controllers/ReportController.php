@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\IngredientHelper;
 use App\Helpers\OrderHelper;
 use App\Models\Ingredient;
 use App\Models\Order;
@@ -13,24 +14,37 @@ class ReportController extends Controller
 {
     public function index(Request $request)
     {
+        $allIngredients = IngredientHelper::getIngredientNames();
+
         if ($org = $request->input('org'))
         {
+            $organizationObject = Organization::find($org);
             $orders = Order::where(
                 'created_at', '>=', Carbon::now()->startOfMonth()->toDateTimeString()
             )->where('organization_id', $org)->get();
-            $orgName = Organization::find($org)->name;
+            $orgName = $organizationObject->name;
             $orgStr = 'Отчёт организации '.$orgName;
+            $isTotalReport = false;
+
+            $amountArray = IngredientHelper::getIngAmountsForOrganization($organizationObject);
         } else {
             $orders = Order::where(
                 'created_at', '>=', Carbon::now()->startOfMonth()->toDateTimeString()
             )->get();
             $orgStr = 'Общий отчет';
+            $isTotalReport = true;
         }
         $income = $this->getIncomeForPeriod($orders);
         $ingredients = $this->getIngredientsForPeriod($orders);
-        $allIngredients = Ingredient::all();
 
-        return view('report.index', compact('income', 'ingredients', 'orgStr', 'allIngredients'));
+        return view('report.index', compact(
+            'income',
+            'ingredients',
+            'orgStr',
+            'allIngredients',
+            'isTotalReport',
+            'amountArray'
+        ));
     }
 
     private function getIncomeForPeriod($orders)

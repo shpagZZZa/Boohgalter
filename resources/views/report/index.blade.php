@@ -17,24 +17,26 @@
                 {{ $income }} руб.
             </div>
 
-            <div>
-                <h1>Ингридиенты: </h1>
-                @if(!$ingredients)
-                    Не потрачено
-                @endif
-                @foreach($ingredients as $name => $amount)
-                    <div>
-                        {{ $name }} - {{ $amount }}
-                    </div>
-                @endforeach
-                <h4>Остаток: </h4>
-                @foreach($allIngredients as $ingredient)
-                    <div>
-                        {{$ingredient->name}} - {{$ingredient->amount}} г
-                    </div>
-                @endforeach
+            @if(!$isTotalReport)
+                <div>
+                    <h1>Ингридиенты: </h1>
+                    @if(!$ingredients)
+                        Не потрачено
+                    @endif
+                    @foreach($ingredients as $name => $amount)
+                        <div>
+                            {{ $name }} - {{ $amount }} г
+                        </div>
+                    @endforeach
+                    <h4>Остаток: </h4>
+                    @foreach($allIngredients as $id => $name)
+                        <div>
+                            {{ $name }} - {{ $amountArray[$id] }} г
+                        </div>
+                    @endforeach
 
-            </div>
+                </div>
+            @endif
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddAmoutToIngredients extends Migration
+class RemoveAmountFromIngredients extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddAmoutToIngredients extends Migration
     public function up()
     {
         Schema::table('ingredients', function (Blueprint $table) {
-            $table->integer('amount')->default(0);
+            $table->dropColumn('amount');
         });
     }
 
@@ -26,7 +26,7 @@ class AddAmoutToIngredients extends Migration
     public function down()
     {
         Schema::table('ingredients', function (Blueprint $table) {
-            $table->removeColumn('amount');
+            $table->integer('amount');
         });
     }
 }

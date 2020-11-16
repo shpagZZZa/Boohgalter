@@ -39,11 +39,16 @@ class DishController extends Controller
         $ingredients = RequestHelper::fillArrayFromRequest("ingredient", $request);
         $amountArray = RequestHelper::fillArrayFromRequest("amount", $request);
 
-        for ($i = 0; $i < count($ingredients); $i++)
+        foreach ($ingredients as $index => $value)
         {
-            $ing = Ingredient::find($ingredients[$i]);
-            $dish->ingredients()->attach($ing, ['amount' => $amountArray[$i]]);
+            $ing = Ingredient::find($ingredients[$index]);
+            $dish->ingredients()->attach($ing, ['amount' => $amountArray[$index]]);
         }
+//        for ($i = 0; $i < count($ingredients); $i++)
+//        {
+//            $ing = Ingredient::find($ingredients[$i]);
+//            $dish->ingredients()->attach($ing, ['amount' => $amountArray[$i]]);
+//        }
 
         return redirect(route('dishes'));
     }

@@ -11,5 +11,11 @@ class Organization extends Model
         return $this->hasMany(Order::class);
     }
 
+    public function ingredients()
+    {
+        return $this->belongsToMany(Ingredient::class)
+            ->withPivot('amount');
+    }
+
     protected $fillable = ['name'];
 }
