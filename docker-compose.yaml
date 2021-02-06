@@ -1,0 +1,45 @@
+version: '3'
+services:
+
+  #PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: digitalocean.com/php
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /app
+    volumes:
+      - ./:/app
+    depends_on:
+      - db
+    networks: &networks
+      - default
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+    - "3366:3306"
+    expose:
+      - "3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  #Nginx Service
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8000:80"
+      - "443:443"
+    volumes:
+      - ./public:/app/public
+      - ./config/boohgalter.conf/:/etc/nginx/conf.d/boohgalter.conf
+    networks: *networks
+
+networks:
+  default:
+    name: boohgalter
+    external: true

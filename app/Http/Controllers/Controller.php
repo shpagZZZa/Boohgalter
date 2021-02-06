@@ -14,6 +14,7 @@ class Controller extends BaseController
     public function error(int $errorId)
     {
         $errorMsg = $this->getErrorMsg($errorId);
+        dd($errorMsg);
         return view('order.error', compact('errorMsg'));
     }
 

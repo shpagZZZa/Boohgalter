@@ -21,6 +21,8 @@ Route::get('/', function (){
 
 Auth::routes();
 
+Route::get('/healthcheck', 'HealthcheckController@healthcheck');
+
 Route::get('/error/{errorId}', 'Controller@error')->name('error')->middleware('auth');
 
 Route::get('/orders', 'OrderController@index')->name('orders')->middleware('auth');
